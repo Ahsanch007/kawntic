@@ -911,6 +911,9 @@ footer .title {
     article.post-blog {
         margin: 20px !important;
     }
+    .mob-navigation{
+        display: none;
+    }
 
     .footer-inner-padding {
         padding: 0px 30px;
