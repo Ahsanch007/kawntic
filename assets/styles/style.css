@@ -877,6 +877,36 @@ footer .title {
     background-image: url(../images/twitter.svg);
 }
 
+.footer-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    z-index: 9999999999;
+}
+.menu-mobile {
+    display: none;
+    max-width: 30px;
+}
+.footer-menu-mobile {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.footer-menu-link {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7558db;
+}
+.footer-menu-link a {
+    color: #fff;
+    font-weight: 700;
+}
 @media(min-width:992px) {
     article.post-blog {
         margin: 20px !important;
@@ -899,6 +929,16 @@ footer .title {
     footer .title {
         font-size: 35px;
     }
+
+    .desktop-slider {
+        display: block;
+    }
+
+    .mob-slide {
+        display: none;
+    }
+
+
 }
 
 @media(max-width:992px) {
@@ -906,6 +946,148 @@ footer .title {
     .menu-desktop {
         display: none;
     }
+
+    .desktop-slider {
+        display: none;
+    }
+
+    .mob-slide {
+        display: block;
+    }
+
+    .footer-menu {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        bottom: 0;
+        z-index: 9999999999;
+    }
+
+    .col-btn-link {
+        z-index: 1;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .on-page-4:before {
+        width: 100% !important;
+    }
+
+    .on-page-3:before {
+        width: 100% !important;
+    }
+
+    .on-page-1:before,
+    .on-page-5:before {
+        width: 100% !important;
+
+    }
+
+    .info-wrapper {
+        text-align: center;
+    }
+
+    .page-detail-content .image img {
+        text-align: center;
+    }
+
+    .main-footer-wrapper .footer-layer {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block !important;
+    }
+    .menu-mobile img{
+        max-width: 100%;
+        height: auto;
+    }
+    .footer-menu-link{
+        z-index: 9999;
+    }
+    .footer-menu-link a {
+        border: 1px dashed #fff;
+        padding: 10px 35px;
+        border-radius: 25px;
+        background: rgb(99 70 201);
+        font-size: 15px;
+        box-shadow: 0 0 12px #6346c9;
+    }
+    .footer-menu-link a {
+        color: #fff;
+        font-weight: 700;
+    }
+ 
+    .mob-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(51 51 51 / .7);
+        height: 100%;
+        z-index: 999999;
+        overflow: scroll;
+        overflow-x: hidden;
+        transform: translateX(-100%); /* Initially off-screen */
+        transition: transform 0.5s ease-in-out;
+        will-change: transform;
+    }
+    
+    .mob-navigation.show {
+        transform: translateX(0); /* Display when the 'show' class is present */
+    }
+    
+.top-menu {
+    position: absolute;
+    width: 70%;
+    background: #fff;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    display: block!important;
+    padding-top: 40px;
+    transition: left 1s ease-in-out;
+    padding-left: 0px;
+}
+.top-menu li a{
+    color: #3a3a3a;
+    text-decoration: none;
+}
+.top-menu li{
+    padding: 10px;
+}
+.menu-close {
+    position: fixed;
+    z-index: 10000000;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: left 0.5s ease-in-out; /* Adjust transition duration */
+    left: -100%;
+    top: 68px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    width: 33px;
+}
+
+.menu-close img {
+    width: 100%;
+}
+
+.show.menu-close {
+    left: 70%;
+    opacity: 1;
+    visibility: visible;
+}
+
 }
 
 
@@ -1253,6 +1435,7 @@ footer .title {
 
     background: #7458dbea;
 }
+
 @media screen and (width<=500px) {
 
     .projectsite .rightproject {
@@ -1262,6 +1445,7 @@ footer .title {
         gap: 3vw;
         text-align: center;
     }
+
     .projectsite .rightproject svg {
         height: 16vw;
         fill: aliceblue;
@@ -1272,31 +1456,32 @@ footer .title {
         object-fit: contain;
         margin-left: 2vw;
     }
+
     .projectsite .rightproject .svg::before {
         top: 50%;
         transform: translate(-100%, -50%);
         height: 4.2vw;
     }
-    
+
     .projectsite .rightproject .svg::after {
         height: 4.2vw;
     }
-    
+
     .projectsite .rightproject h1 {
         font-size: 5.7vw;
         font-weight: bolder;
         width: 100%;
         color: rgba(0, 0, 0, 0.702);
     }
-    
+
     .projectsite .rightproject p {
         font-weight: 500;
         font-size: 3vw;
-        line-height:4vw;
+        line-height: 4vw;
         color: black;
         text-align: justify;
     }
-    
+
     .projectsite .rightproject a {
         font-size: 3.2vw;
         color: aliceblue;
@@ -1304,6 +1489,7 @@ footer .title {
         border-radius: 50px;
         padding: 2vw 14vw;
     }
+
 
 }
 
@@ -1622,7 +1808,8 @@ footer .title {
     object-fit: contain;
     cursor: pointer;
 }
-.swiper-slide:last-child{
+
+.swiper-slide:last-child {
     display: none;
 }
 
@@ -1713,31 +1900,33 @@ footer .title {
         width: 90vw;
         margin: auto;
     }
+
     .industrysite .rightindustry svg {
         height: 16vw;
         padding: 3vw;
     }
+
     .industrysite .rightindustry .svg::before {
         top: 50%;
         transform: translate(-100%, -50%);
         height: 4.2vw;
     }
-    
+
     .industrysite .rightindustry .svg::after {
         height: 4.2vw;
     }
-    
+
     .industrysite .rightindustry h1 {
         font-size: 6vw;
         font-weight: bolder;
         width: 90vw;
         color: rgba(0, 0, 0, 0.702);
     }
-    
+
     .industrysite .rightindustry p {
         font-weight: 500;
         font-size: 3vw;
-        line-height:4vw;
+        line-height: 4vw;
         color: black;
         text-align: justify;
         width: 90%;
