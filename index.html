@@ -638,43 +638,43 @@
                 problématiques. Notre équipe est forte d’une expertise dans les industries suivantes : médicale,
                 agroalimentaire, immobilier, voyage...</p>
         </div>
-        <div class="sLider sliderselection">
-            <div class="slider-wrapper wrapperselection">
-                <div class="slideselection slider-slide" --data-txt="Medicale"><a href="http://google.com"
+        <div class="SLider sliderselectionindustry">
+            <div class="slider-wrapper wrapperselectionindustry">
+                <div class="slideselectionindustry slider-slide" --data-txt="Medicale"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry1.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Artisan"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Artisan"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry2.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Mode / Cosmetique"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Mode / Cosmetique"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/frogg.svg" alt=""></a></div>
-                <div class="slideselection slider-slide" --data-txt="Agrolimentore"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Agrolimentore"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry3.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Botique"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Botique"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry4.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Education"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Education"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry5.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Batiment"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Batiment"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry6.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Retauration"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Retauration"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/industry7.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide" --data-txt="Voyage"><a href="http://google.com" target="_blank"
+                <div class="slideselectionindustry slider-slide" --data-txt="Voyage"><a href="http://google.com" target="_blank"
                         rel="noopener noreferrer"><img src="./assets/images/industry8.svg" alt=""></a></div>
-                <div class="slideselection slider-slide" --data-txt="Transportation"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Transportation"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/plane.svg" alt=""></a></div>
-                <div class="slideselection slider-slide" --data-txt="Droit"><a href="http://google.com" target="_blank"
+                <div class="slideselectionindustry slider-slide" --data-txt="Droit"><a href="http://google.com" target="_blank"
                         rel="noopener noreferrer"><img src="./assets/images/industry9.svg" alt=""></a></div>
-                <div class="slideselection slider-slide" --data-txt="Sports"><a href="http://google.com" target="_blank"
+                <div class="slideselectionindustry slider-slide" --data-txt="Sports"><a href="http://google.com" target="_blank"
                         rel="noopener noreferrer"><img src="./assets/images/industry10.svg" alt=""></a></div>
-                <div class="slideselection slider-slide" --data-txt="Environment"><a href="http://google.com"
+                <div class="slideselectionindustry slider-slide" --data-txt="Environment"><a href="http://google.com"
                         target="_blank" rel="noopener noreferrer"><img src="./assets/images/planet.svg" alt=""></a>
                 </div>
-                <div class="slideselection slider-slide lastone" --data-txt=""><img src="./assets/images/road_flat.svg"
+                <div class="slideselectionindustry slider-slide lastone" --data-txt=""><img src="./assets/images/road_flat.svg"
                         alt=""></div>
             </div>
         </div>
@@ -1308,6 +1308,18 @@
                 },
             });
         }
+        // swiper for industries section
+        function SWiperwork() {
+            swiper = new Swiper(".sliderselectionindustry", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        }
 
 
 
@@ -1367,14 +1379,78 @@
 
             }
         }
+        
+
+
+        // need swaping between classes according to size of device for industry section
+        let slideindustrys = document.querySelectorAll('.slideselectionindustry');
+        let wrappersindustrys = document.querySelectorAll('.wrapperselectionindustry');
+        let myswipersindustrys = document.querySelectorAll('.sliderselectionindustry');
+
+
+        const sliderfunctioningIndustry = () => {
+
+            if (window.innerWidth <= 1100) {
+                slideindustrys.forEach(slide => {
+                    slide.classList.add('swiper-slide');
+                });
+                wrappersindustrys.forEach(wrapper => {
+                    wrapper.classList.add('swiper-wrapper');
+                });
+                myswipersindustrys.forEach(myswiper => {
+                    myswiper.classList.add('swiper');
+                });
+
+
+                slides.forEach(slide => {
+                    slide.classList.remove('slider-slide');
+                });
+                wrappersindustrys.forEach(wrapper => {
+                    wrapper.classList.remove('slider-wrapper');
+                });
+                myswipersindustrys.forEach(myswiper => {
+                    myswiper.classList.remove('SLider');
+                });
+
+                SWiperwork();
+
+            } else {
+                slideindustrys.forEach(slide => {
+                    slide.classList.remove('swiper-slide');
+                });
+                wrappersindustrys.forEach(wrapper => {
+                    wrapper.classList.remove('swiper-wrapper');
+                });
+                myswipersindustrys.forEach(myswiper => {
+                    myswiper.classList.remove('swiper');
+                });
+
+
+                slideindustrys.forEach(slide => {
+                    slide.classList.add('slider-slide');
+                });
+                wrappersindustrys.forEach(wrapper => {
+                    wrapper.classList.add('slider-wrapper');
+                });
+                myswipersindustrys.forEach(myswiper => {
+                    myswiper.classList.add('SLider');
+                });
+
+            }
+        }
+        
+        
+        
         // for instance where just opened in mobile or device for first time
         $(document).ready(() => {
             sliderfunctioning();
+            sliderfunctioningIndustry();
         });
 
         // for instance where just opened large device and user resize to small device
         $(window).resize(() => {
             sliderfunctioning();
+            sliderfunctioningIndustry();
         });
 
 
