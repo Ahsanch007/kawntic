@@ -1129,7 +1129,16 @@ footer .title {
 
 .projectsite .sLider {
     width: 50%;
+    margin: auto;
+    margin-top: 16vw;
+    height: 50vh;
+
     position: relative;
+    background: url('../images/section2bgTower.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-y:-5.3vw;
+    background-position-x:1.2vw;
 }
 
 .projectsite .sLider .slider-wrapper {
@@ -1264,9 +1273,9 @@ footer .title {
     z-index: 0;
 }
 .projectsite .sLider .slider-wrapper .slider-slide:nth-child(7) img {
-    width: 4vw;
+    width: 4.1vw;
     object-fit: contain;
-    left: 65%;
+    left: 60%;
     top:-300%;
 }
 
@@ -1309,7 +1318,7 @@ footer .title {
     top: 18%;
 }
 .projectsite .sLider .slider-wrapper .slider-slide:nth-child(7)::before {
-    left: 0%;
+    left: -6%;
     top: -300%;
     font-family: 'AvenirLTStdBold', sans-serif;
     font-size: 1.6vw;
@@ -1330,7 +1339,7 @@ footer .title {
 }
 
 .projectsite .sLider .slider-wrapper .slider-slide:hover::before {
-    background: black;
+    background: #4f32b9;
     clip-path: polygon(0% 100%, 0% 0%, 100% 14%, 100% 23%, 85% 27%, 100% 30%, 100% 43%, 78% 41%, 99% 51%, 100% 63%, 87% 69%, 100% 68%, 99% 92%, 0% 100%, 100% 94%, 65% 92%, 64% 100%);
     color: aliceblue;
     width: fit-content;
@@ -1358,6 +1367,9 @@ footer .title {
     .projectsite {
         gap: 23vw;
         margin: 10vw auto;
+    }
+    .projectsite .sLider {
+       background: none;
     }
 
 }
@@ -1537,6 +1549,18 @@ footer .title {
     margin: 10vw auto;
     text-align: center;
     position: relative;
+
+    background: url("../images/buldingsbg.jpeg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size:contain;
+}
+
+@media screen and (width<=1100px) {
+    .industrysite {
+       background: none;
+    }
+
 }
 
 .industrysite .SLider {
@@ -1544,6 +1568,7 @@ footer .title {
     height: 40vh;
     position: relative;
     margin: auto;
+    
 }
 
 .industrysite .SLider .slider-wrapper {
@@ -1802,7 +1827,7 @@ footer .title {
 
 
 .industrysite .SLider .slider-wrapper .slider-slide:hover::before {
-    background: black;
+    background: #4f32b9;
     clip-path: polygon(0% 100%, 0% 0%, 100% 14%, 100% 23%, 85% 27%, 100% 30%, 100% 43%, 78% 41%, 99% 51%, 100% 63%, 87% 69%, 100% 68%, 99% 92%, 0% 100%, 100% 94%, 65% 92%, 64% 100%);
     color: aliceblue;
     width: fit-content;
