@@ -486,7 +486,7 @@ span.icon-fond svg {
     background-repeat: no-repeat !important;
     bottom: 103px;
     top: inherit !important;
-    background-position: bottom !important;
+    background-position: center !important;
 }
 
 .images {
@@ -703,6 +703,42 @@ footer .title {
     margin-right: 75px;
 }
 
+
+.main-footer-wrapper .layers-bottom {
+    display: flex;
+    top: 0;
+    justify-content: flex-end;
+    width: 420px;
+    left: 466px;
+    padding-bottom: 80px;
+}
+.main-footer-wrapper .layers-bottom {
+    width: 260px;
+    left: 408px;
+}
+.main-footer-wrapper .layers-bottom img:nth-of-type(1) {
+    position: relative;
+    top: 92px;
+    left: 30px;
+}
+.main-footer-wrapper .layers-bottom img:nth-of-type(2) {
+    top: 48px;
+    left: 40px;
+    width: 180px;
+}
+.main-footer-wrapper .layers-bottom img:nth-of-type(3) {
+    margin-right: -125px;
+}
+.main-footer-wrapper .layers-bottom img:nth-of-type(3) {
+    height: 42px;
+    position: relative;
+    top: 30px;
+    width: 100%;
+}
+.main-footer-wrapper .layers-bottom img:nth-of-type(4) {
+    margin-left: -275px;
+}
+
 .description-intro span {
     text-transform: uppercase;
     font-weight: 700;
@@ -907,6 +943,10 @@ footer .title {
     color: #fff;
     font-weight: 700;
 }
+.slick-initialized .slick-slide{
+    padding-bottom: 60px;
+}
+
 @media(min-width:992px) {
     article.post-blog {
         margin: 20px !important;
@@ -1091,6 +1131,12 @@ footer .title {
     left: 70%;
     opacity: 1;
     visibility: visible;
+}
+.title2{
+    text-align: center;
+}
+.image{
+    text-align: center;
 }
 
 }
