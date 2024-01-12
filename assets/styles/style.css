@@ -1128,6 +1128,7 @@ footer .title {
 .projectsite .sLider {
     width: 50%;
     position: relative;
+    background: url("../images/buldingsbg.jpeg");
 }
 
 .projectsite .sLider .slider-wrapper {
