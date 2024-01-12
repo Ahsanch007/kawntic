@@ -945,7 +945,9 @@ footer .title {
 }
 
 @media(max-width:992px) {
-
+.hiiden-over{
+    overflow: hidden;
+}
     .menu-desktop {
         display: none;
     }
