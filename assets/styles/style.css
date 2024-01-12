@@ -1129,12 +1129,16 @@ footer .title {
 
 .projectsite .sLider {
     width: 50%;
+    margin: auto;
     margin-top: 16vw;
     height: 50vh;
+
     position: relative;
-    background-size: contain;
+    background: url('../images/section2bgTower.svg');
+    background-size:contain;
     background-repeat: no-repeat;
-    background-position:top;
+    background-position-y:-5.3vw;
+    background-position-x:1.2vw;
 }
 
 .projectsite .sLider .slider-wrapper {
@@ -1363,6 +1367,9 @@ footer .title {
     .projectsite {
         gap: 23vw;
         margin: 10vw auto;
+    }
+    .projectsite .sLider {
+       background: none;
     }
 
 }
